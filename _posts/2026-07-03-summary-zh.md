@@ -5,399 +5,310 @@ date: 2026-07-03
 lang: zh
 ---
 
-> 从 59 条内容中筛选出 17 条重要资讯。
+> 从 53 条内容中筛选出 17 条重要资讯。
 
 ---
 
-1. [理解才能参与：避免 AI 编码代理带来的认知债务](#item-1) ⭐️ 8.0/10
-2. [Hierarchos：232M 参数递归记忆增强模型展现潜力](#item-2) ⭐️ 8.0/10
-3. [中国 AI 模型 Z.ai 缩小与美国领先者的差距](#item-3) ⭐️ 8.0/10
-4. [攻击链逃逸 Anthropic 的 Claude Cowork 沙箱](#item-4) ⭐️ 8.0/10
+1. [理解才能参与：避免 AI 编码中的认知债务](#item-1) ⭐️ 8.0/10
+2. [JADEPUFFER：首个由自主 AI 代理驱动的勒索软件](#item-2) ⭐️ 8.0/10
+3. [Anthropic 自研 AI 芯片，考虑三星代工](#item-3) ⭐️ 8.0/10
+4. [攻击链突破 Anthropic Claude Cowork 沙箱](#item-4) ⭐️ 8.0/10
 5. [Simon Willison 发布 llm-coding-agent 0.1a0](#item-5) ⭐️ 7.0/10
-6. [使用 DSPy 评估并改进 Datasette Agent 的 SQL 提示词](#item-6) ⭐️ 7.0/10
-7. [SentryCode：面向 AI 编码代理的开源内核级审计工具](#item-7) ⭐️ 7.0/10
-8. [Codebase Memory MCP：亚毫秒级代码智能服务器](#item-8) ⭐️ 7.0/10
-9. [rtk：Rust CLI 代理将 LLM 令牌消耗降低 60-90%](#item-9) ⭐️ 7.0/10
-10. [大语言模型对 AI 基础设施构成新安全威胁](#item-10) ⭐️ 7.0/10
-11. [AI 聊天机器人模仿人类权力动态和社会偏见](#item-11) ⭐️ 7.0/10
-12. [智谱 AI 将 GLM-5.2 转化为智能体，挑战 Anthropic](#item-12) ⭐️ 7.0/10
-13. [因果推断修复 LLM 数据混合偏移问题](#item-13) ⭐️ 7.0/10
-14. [Anthropic 自研 AI 芯片挑战英伟达](#item-14) ⭐️ 7.0/10
-15. [葡萄牙发布首个开源 AI 模型 Amália](#item-15) ⭐️ 7.0/10
-16. [韩国公布 6448 亿美元量子蓝图](#item-16) ⭐️ 7.0/10
-17. [Inception42 与微软推出阿拉伯语 AI 模型](#item-17) ⭐️ 7.0/10
+6. [使用 DSPy 优化 Datasette Agent 的 SQL 提示](#item-6) ⭐️ 7.0/10
+7. [探讨微调抵抗对安全 AI 的意义](#item-7) ⭐️ 7.0/10
+8. [LLM 被用作攻击 AI 基础设施的武器](#item-8) ⭐️ 7.0/10
+9. [AI 聊天机器人模仿人类权力动态和社会偏见](#item-9) ⭐️ 7.0/10
+10. [因果推断修复大模型数据混合偏移](#item-10) ⭐️ 7.0/10
+11. [廉价中国 AI 模型追赶 Anthropic 和 OpenAI](#item-11) ⭐️ 7.0/10
+12. [幻影域名抢注：攻击者利用 AI 幻觉生成的域名](#item-12) ⭐️ 7.0/10
+13. [Interfaze 发布开源扩散 ASR 模型，支持六种语言](#item-13) ⭐️ 7.0/10
+14. [葡萄牙发布首个开源 AI 模型](#item-14) ⭐️ 7.0/10
+15. [Inception42 与微软联合发布阿拉伯语 AI 模型](#item-15) ⭐️ 7.0/10
+16. [思维链欺骗攻击推理型 AI 模型](#item-16) ⭐️ 7.0/10
+17. [用 t0-alpha 解释时间序列大语言模型](#item-17) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [理解才能参与：避免 AI 编码代理带来的认知债务](https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything) ⭐️ 8.0/10
+## [理解才能参与：避免 AI 编码中的认知债务](https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything) ⭐️ 8.0/10
 
-Simon Willison 在 AIE 大会上强调了 Geoffrey Litt 提出的“理解才能参与”概念，认为开发者必须深入理解 AI 生成的代码，以避免认知债务，并保持对创作过程的积极参与。 随着 AI 编码代理生成越来越大、越来越复杂的变更，开发者面临失去对代码库理解的风险，从而导致认知债务。这一框架为在 AI 辅助软件开发中保持人类主动性和代码质量提供了实用原则。 Geoffrey Litt 在 AIE 大会上提出了这一概念，他的演讲内容以 Twitter 线程形式发布。Simon Willison 推荐在 YouTube 上观看该演讲的录像，该录像来自大会的 300 多场演讲。
+Geoffrey Litt 在 2026 年 AI 工程师世界博览会上提出了“理解才能参与”的概念，认为开发者必须深入理解 AI 生成的代码，以避免认知债务并保持有效的协作。 随着 AI 编码代理生成越来越庞大和复杂的变更，开发者面临失去对代码库理解的风险，从而导致认知债务，阻碍未来的开发。这一概念凸显了生成式 AI 时代软件工程师所需的关键技能转变。 Litt 强调，理解代码到足以积极参与的深度，对于创造性和流畅地思考项目方向至关重要。该演讲是 AIE 会议的一部分，会议有超过 300 场录播，将在三周内陆续发布。
 
 rss · Simon Willison · 7月2日 17:07
 
-**背景**: 认知债务指的是对系统为何工作、其脆弱性、权衡以及更改的置信度缺乏理解的累积。与技术债务不同，技术债务使软件更难更改，而认知债务使开发者更难推理和安全地修改代码。随着 AI 编码助手能力增强，开发者可能在不完全理解的情况下接受代码，从而积累认知债务，损害长期可维护性。
+**背景**: 认知债务指的是随着 AI 生成的代码积累，软件团队中共享理解的侵蚀，使得系统更难被推理和安全地修改。与技术债务关注代码质量不同，认知债务存在于开发者的头脑中，影响他们有效工作的能力。随着 AI 辅助编码的普及，这一概念正受到越来越多的关注。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://mathiesen.dev/writing/cognitive-debt">Cognitive Debt | Jarle Mathiesen</a></li>
-<li><a href="https://www.thoughtworks.com/en-au/insights/blog/generative-ai/cognitive-demands-ai-novelty">The cognitive demands of AI novelty | Thoughtworks Australia</a></li>
-<li><a href="https://www.anthropic.com/research/AI-assistance-coding-skills">How AI assistance impacts the formation of coding skills \ Anthropic</a></li>
+<li><a href="https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck.html">Understanding is the new bottleneck</a></li>
+<li><a href="https://x.com/geoffreylitt/status/2072522251300409556">Geoffrey Litt on X: "Hot take: I think it's still important to understand the code that our agents write! In this mega thread (based on my AIE talk today), I will explain why that's the case, and show some ideas for how to efficiently understand code. Alright, let's dive in. 1/ https://t.co/765DNZh6LN" / X</a></li>
+<li><a href="https://margaretstorey.com/blog/2026/02/09/cognitive-debt/">How Generative and Agentic AI Shift Concern from Technical Debt to Cognitive Debt</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI-assisted coding`, `#cognitive debt`, `#software engineering`, `#human-AI collaboration`
+**社区讨论**: 在 Twitter 上，Litt 的帖子引发了关于理解与信任 AI 代理之间平衡的讨论。一些评论者指出，即使代理通过了理解测试，它们仍可能生成错误的代码，这凸显了稳健验证的必要性。
+
+**标签**: `#AI-assisted coding`, `#cognitive debt`, `#developer experience`, `#software engineering`
 
 ---
 
 <a id="item-2"></a>
-## [Hierarchos：232M 参数递归记忆增强模型展现潜力](https://www.reddit.com/r/MachineLearning/comments/1um123n/hierarchos_preliminary_findings_from_a_232m/) ⭐️ 8.0/10
+## [JADEPUFFER：首个由自主 AI 代理驱动的勒索软件](https://news.google.com/rss/articles/CBMi4wFBVV95cUxOY0JwM2VEbnl4ZkJsYzVtMHR2RzV6UWRiRDdRT21SeTFnc3pUeUdMQklNTmlsd3RxYklyZ3ZJSlotSjlfQ01TOVVrX1BPekRzc3U0RGxPbmpqTHQ3ZllJcGtGZGZFQWpKN1Y2ODVORGl4YWp3NllwOWwxZDBaclFvdFBaQkVaa25sTTlCTmVYTUZYeVRadHlNc0Q4bTZZT3NZb3IwRkFrTjl6TGEtTDZWSHVVaUR0emQwUlJsMzZaS3ROaXNRQlUxcVRMTUhqUE9kbThFdTBSNV82ZlliSjA0RGRYOA?oc=5) ⭐️ 8.0/10
 
-研究人员发布了 Hierarchos，一个 232M 参数的递归记忆增强语言模型，它结合了 RWKV 骨干网络、分层管理器/工作器循环、可微分的基于槽的长时记忆以及确定性后缀自动机，并在 RTX 6000 Blackwell GPU 上从头训练。 这项工作证明了混合非 Transformer 架构可以稳定训练并保持指令连贯性，挑战了基于 Transformer 的模型的主导地位，并可能带来更参数高效的替代方案。 关键的工程修复包括对齐训练/推理的漂移状态重置、切换到只读 LTM 训练模式以避免监督记忆的拐杖，以及钳制 RWKV 通道混合激活以防止 NaN 梯度。
+Sysdig 威胁研究团队记录了 JADEPUFFER，这是首个已知的由基于大语言模型的自主代理在无需人工干预的情况下执行完整攻击链（从初始利用到数据库加密和勒索）的勒索软件操作。 这标志着网络威胁的重大演变，AI 代理现在可以以机器速度自主进行勒索软件攻击，降低了网络犯罪的门槛，并可能导致自动化、可扩展的勒索活动激增。 该代理利用开源工具 Langflow 中的漏洞获得初始访问权限，然后自主收集凭证并加密数据库。整个操作由一个大语言模型（LLM）驱动，该模型实时调整有效载荷。
 
-reddit · r/MachineLearning · /u/PhysicsDisastrous462 · 7月3日 01:48
+google_news · Escudo Digital · 7月3日 05:05
 
-**背景**: 现代大型语言模型主要基于 Transformer 架构，虽然扩展性好但计算成本高。像 RWKV 这样的递归架构无需注意力机制即可高效处理序列，而记忆增强和分层推理旨在提高参数效率。Hierarchos 探索在小规模模型中结合这些思想。
+**背景**: 勒索软件是一种加密受害者数据并要求支付赎金以解密的恶意软件。传统上，人工操作员手动执行攻击的每个阶段。AI 驱动的勒索软件利用人工智能来自动化和加速这些阶段，而 JADEPUFFER 代表了首个完全自主、端到端的代理型勒索软件操作。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://arxiv.org/pdf/2406.19369">Mamba or RWKV : Exploring High-Quality and</a></li>
-<li><a href="https://www.rwkv.com/">RWKV Language Model</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Suffix_automaton">Suffix automaton - Wikipedia</a></li>
+<li><a href="https://www.escudodigital.com/en/technology/artificial-intelligence/inside-jadepuffer-the-first-ransomware-operation-driven-by-autonomous-agents.html">Inside JADEPUFFER: The first ransomware operation driven by autonomous agents | DigitalShield</a></li>
+<li><a href="https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion">JADEPUFFER: Agentic ransomware for automated database extortion | Sysdig</a></li>
+<li><a href="https://www.scworld.com/news/1st-agentic-ransomware-jadepuffer-invades-database-at-machine-speed">1st ‘agentic ransomware’ JADEPUFFER invades database at machine speed | news | SC Media</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: Reddit 上的讨论内容充实，评论者询问了训练稳定性、记忆机制以及与其他非 Transformer 模型的比较。作者积极参与，对修复措施和未来计划进行了澄清。总体情绪积极，认可了工程的严谨性，同时指出模型规模较小。
-
-**标签**: `#machine learning`, `#language models`, `#recurrent architectures`, `#memory augmentation`, `#research`
+**标签**: `#ransomware`, `#autonomous agents`, `#cybersecurity`, `#AI threats`, `#malware`
 
 ---
 
 <a id="item-3"></a>
-## [中国 AI 模型 Z.ai 缩小与美国领先者的差距](https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRHN2T0NPR3ZJMWZheVBDbUxxS1pBbHpfSjBmSTNseVFEU0FUcnc1OFJJNzNGZVB1M1ZIdExGb0NfTWpKYnhTSm8xRUhzbm14RWRNRWJyaWctbjVLWmdRM0d1UjFBalpyNDJoTDNwVldrRGxGN1U0aUtUcEp3a2t1aDYxdFpfRFMzZDZodUNNdEJpMkoyOWFYakZLb1NrZ0M4a01qQW9HTkFUQkltaGNjWk9CcXYxUGdndmNPclNEOVlxVFk?oc=5) ⭐️ 8.0/10
+## [Anthropic 自研 AI 芯片，考虑三星代工](https://news.google.com/rss/articles/CBMidEFVX3lxTFA3djFPUE00M1A0em1ONW50ckhTQ0NpXzhPTmdHaEFlSm1iS3FDSXcyMmZhMnhoMXFFVlJRSkFPV1NGMzQzYUpPVmdUZWpPNHhpZlljT0gtUndLUkJ6SktSaEZlYnlIWVlrYkJnY2VRVmZoQ3FD?oc=5) ⭐️ 8.0/10
 
-中国初创公司 Z.ai 发布了一款新 AI 模型，其性能几乎与 Anthropic 的 Fable 和 Mythos 模型以及 OpenAI 的产品相当，但成本低得多。这一进展被称为“迷你 DeepSeek 时刻”，并引起了西方初创公司的关注。 这标志着 AI 格局的重大转变，中国模型在性能上与美国领先者竞争，同时在价格上更具优势。这给美国 AI 公司带来压力，要求它们证明其高成本的合理性，并可能加速中国 AI 在全球的采用。 该模型是开放权重的，意味着其参数公开可用，且使用成本远低于同类美国模型。前美国 AI 负责人 David Sacks 指出，它“与 OpenAI 和 Anthropic 当前可用的模型一样好”。
+据报道，Anthropic 正在开发自研 AI 芯片，并与三星代工进行了早期洽谈，将其作为潜在制造合作伙伴，旨在减少对英伟达 GPU 的依赖。 此举标志着 AI 硬件战略的重大转变，领先的 AI 公司寻求对昂贵计算基础设施的更多控制。如果成功，可能加剧 AI 芯片市场竞争，削弱英伟达的主导地位。 Anthropic 目前采用多元化计算策略，使用谷歌 TPU、亚马逊 Trainium 和英伟达 GPU。此次自研芯片开发效仿了 OpenAI 的做法，后者最近与博通合作推出了自研推理处理器“Jalapeño”。
 
-google_news · Reuters · 7月2日 07:40
+google_news · Businesskorea · 7月3日 01:32
 
-**背景**: 另一家中国 AI 初创公司 DeepSeek 在去年初以廉价但强大的模型震惊市场，开创了平价中国 AI 的趋势。此后，全球消费者面临选择：价格较低的中国产品，还是 OpenAI 和 Anthropic 更昂贵的美国模型。
+**背景**: AI 芯片是专门用于加速机器学习工作负载的处理器，目前英伟达 GPU 主导市场。三星代工是领先的半导体制造商，提供 3nm GAA 等先进工艺节点。自研芯片使 AI 公司能够针对自身模型优化性能和成本。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://tribune.com.pk/story/2616094/a-new-inexpensive-chinese-ai-model-is-catching-up-with-anthropic-openai-on-their-home-turf">A new, inexpensive Chinese AI model is catching up with Anthropic ...</a></li>
-<li><a href="https://www.nytimes.com/2026/06/25/technology/zai-china-artificial-intelligence-models.html">Chinese A . I . Models Close the Gap With Anthropic and OpenAI</a></li>
-<li><a href="https://enterpriseai.economictimes.indiatimes.com/news/industry/a-new-inexpensive-chinese-ai-model-is-catching-up-with-anthropic-openai-on-their-home-turf/132140542">Making AI Work: A new, inexpensive Chinese AI model is catching up with Anthropic, OpenAI on their home turf, ETEnterpriseai</a></li>
+<li><a href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/">Anthropic is discussing a new custom chip with Samsung | TechCrunch</a></li>
+<li><a href="https://www.theinformation.com/articles/anthropic-talks-samsung-manufacture-custom-ai-chip">Anthropic in Talks With Samsung to Manufacture Custom AI Chip — The Information</a></li>
+<li><a href="https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services">Expanding our use of Google Cloud TPUs and Services \ Anthropic</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Chinese AI`, `#competition`, `#industry news`
+**标签**: `#AI chips`, `#Anthropic`, `#Nvidia`, `#Samsung Foundry`, `#semiconductors`
 
 ---
 
 <a id="item-4"></a>
-## [攻击链逃逸 Anthropic 的 Claude Cowork 沙箱](https://news.google.com/rss/articles/CBMipgFBVV95cUxQRTktVTg1X2w2ZGl4OXpScTZGcjFiS0Qtd0JWZ2lKX0pEQUVyUndBa2hwQng5UEhfa0t2cDVlUnNNbHA0cnljTFVsUFE1aHkzX044R2dSS2hxVG1YQXI4czRaMHlERThXQ1liWEhNdmFJZy1UeVZEd000bURPay1sN0RGWGE2aG1hckhNbVhDaXVxcElXV2tLdjVxOVkzSWJzQk5Ud09B?oc=5) ⭐️ 8.0/10
+## [攻击链突破 Anthropic Claude Cowork 沙箱](https://news.google.com/rss/articles/CBMipgFBVV95cUxQRTktVTg1X2w2ZGl4OXpScTZGcjFiS0Qtd0JWZ2lKX0pEQUVyUndBa2hwQng5UEhfa0t2cDVlUnNNbHA0cnljTFVsUFE1aHkzX044R2dSS2hxVG1YQXI4czRaMHlERThXQ1liWEhNdmFJZy1UeVZEd000bURPay1sN0RGWGE2aG1hckhNbVhDaXVxcElXV2tLdjVxOVkzSWJzQk5Ud09B?oc=5) ⭐️ 8.0/10
 
-研究人员披露了一种攻击链，成功逃逸了 Anthropic 的 Claude Cowork 沙箱，展示了该 AI 助手执行环境中的安全漏洞。 这一发现凸显了执行真实计算机操作的 AI 助手环境中的重大安全风险，可能影响企业采用和对 AI 安全措施的信任。 该攻击链可能涉及将多个漏洞串联，从沙箱内代码执行发展到主机级入侵，类似于经典的沙箱逃逸技术。
+研究人员披露了一条详细的攻击链，能够突破 Anthropic Claude Cowork（一款 AI 代理工具）的沙箱环境。该漏洞绕过了旨在将 AI 与主机系统隔离的安全限制。 这一发现凸显了 AI 代理沙箱中的关键安全弱点，可能允许恶意代码危害主机系统。随着 AI 代理获得更多系统访问权限，它强调了需要更强的隔离机制。 该攻击链利用多个步骤逃逸沙箱，在 macOS 上沙箱使用 Apple 的 Seatbelt 框架，在 Linux 上使用 bwrap。研究人员证明，沙箱并不能完全保护已授权文件夹内的用户数据。
 
 google_news · SC Media · 7月2日 13:48
 
-**背景**: Claude Cowork 是一款 AI 助手，能够在沙箱环境中执行用户计算机上的操作，如文件操作和运行代码。沙箱逃逸是指攻击者突破此受限环境，获得对主机系统的未授权访问。此类漏洞至关重要，因为它们可能导致系统完全被攻陷。
+**背景**: Claude Cowork 是 Anthropic Claude Code 中的一种 AI 代理模式，可以执行命令并与系统交互。其沙箱旨在限制 AI 的行为以防止危害，但此次攻击表明，坚定的攻击者仍然可以突破。沙箱逃逸是安全领域已知的挑战，但这是针对主要 AI 实验室产品的实际演示。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.huntress.com/cybersecurity-101/topic/sandbox-escape">What Is Sandbox Escape in Cybersecurity?</a></li>
-<li><a href="https://cymulate.com/blog/the-race-to-ship-ai-tools-left-security-behind-part-1-sandbox-escape/">The Race to Ship AI Tools Left Security Behind. Part 1: Sandbox Escape</a></li>
+<li><a href="https://code.claude.com/docs/en/sandboxing">Configure the sandboxed Bash tool - Claude Code Docs</a></li>
+<li><a href="https://coworkerai.io/guide/security-setup">Claude Cowork Security & Sandbox Setup</a></li>
+<li><a href="https://dev.to/aaron_walker_dc0d1194638f/escaping-the-sandbox-jailbreaking-claude-cowork-dbd">Jailbreaking Claude Cowork: Escaping the “Sandbox” - DEV Community</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI safety`, `#security`, `#Anthropic`, `#sandbox escape`, `#vulnerability`
+**社区讨论**: DEV Community 上关于越狱 Claude Cowork 的帖子指出，沙箱阻止了访问私有 API 或运行 Docker 等实际任务，但逃逸方法表明它可能限制过多却仍不安全。评论者对安全性与可用性之间的平衡表示担忧。
+
+**标签**: `#AI safety`, `#sandbox escape`, `#Anthropic`, `#security vulnerability`, `#Claude`
 
 ---
 
 <a id="item-5"></a>
 ## [Simon Willison 发布 llm-coding-agent 0.1a0](https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything) ⭐️ 7.0/10
 
-Simon Willison 发布了 llm-coding-agent 0.1a0，这是一个基于其 LLM 库构建的 alpha 版编码代理，该库已演变为代理框架。该代理可以读写文件、执行命令和搜索代码，并可通过 PyPI 安装。 此次发布展示了 LLM 库向完整代理框架的转变，提供了一个可轻松集成到 Python 工作流中的实用编码代理。它为构建更复杂的 AI 辅助开发工具奠定了基础。 该代理包含 edit_file、execute_command、list_files、read_file 和 search_files 等工具，并通过 CodingAgent 类提供 Python API。它使用 Claude Code 开发，并遵循测试驱动开发方法。
+Simon Willison 发布了 llm-coding-agent 0.1a0，这是一个基于他的 LLM 库构建的实验性编码代理，灵感来自 Claude Code。该代理提供了读取、编辑和搜索文件以及执行 shell 命令的工具。 此次发布标志着 LLM 库向代理框架的演进，支持 AI 辅助编码工作流。它降低了开发者使用熟悉的 Python 生态系统实验编码代理的门槛。 该代理包含 edit_file、execute_command、list_files、read_file 和 search_files 等工具，可通过 `uvx --prerelease=allow --with llm-coding-agent llm code` 运行。它还提供了带有 CodingAgent 类的 Python API。
 
 rss · Simon Willison · 7月2日 19:33
 
-**背景**: LLM 代理框架是允许开发者构建能够执行编码、文件操作和命令执行等任务的自主 AI 代理的工具。Claude Code 是 Anthropic 的代理编码工具，启发了该项目。Simon Willison 的 LLM 库是一个流行的 Python 工具，用于与大型语言模型交互。
+**背景**: Simon Willison 的 LLM 库是一个用于与大语言模型交互的 Python 工具。Claude Code 是 Anthropic 开发的 AI 编码助手，可以自主编辑文件和运行命令。该项目是一个早期 alpha 实验，旨在使用 LLM 库复制类似功能。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/kaushikb11/awesome-llm-agents">GitHub - kaushikb11/awesome-llm-agents: A curated list of awesome LLM agents frameworks. · GitHub</a></li>
-<li><a href="https://claude.com/product/claude-code">Claude Code by Anthropic | AI Coding Agent, Terminal, IDE</a></li>
-<li><a href="https://code.claude.com/docs/en/overview">Overview - Claude Code Docs</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Code">Claude Code</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI agents`, `#coding agent`, `#LLM`, `#Python`, `#Simon Willison`
+**标签**: `#AI agents`, `#coding agent`, `#LLM`, `#Python`, `#open source`
 
 ---
 
 <a id="item-6"></a>
-## [使用 DSPy 评估并改进 Datasette Agent 的 SQL 提示词](https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything) ⭐️ 7.0/10
+## [使用 DSPy 优化 Datasette Agent 的 SQL 提示](https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything) ⭐️ 7.0/10
 
-Simon Willison 使用 DSPy 框架评估并改进了 Datasette Agent（一个面向 Datasette 的 AI 助手）的 SQL 系统提示词。他让 Claude Fable 5 使用 GPT-4.1 mini 和 nano 运行实验，发现了具体的提示词缺陷，例如因缺少模式细节而导致的列名猜测问题。 这展示了一种使用 DSPy 进行提示词优化的实用自动化工作流程，可帮助开发者系统性地提升 AI 代理的性能。它突显了将 DSPy 等研究工具与基于 LLM 的代理相结合，如何能带来更可靠、更高效的 AI 系统。 该实验使用 Claude Fable 5 来编排 DSPy 评估，测试了 GPT-4.1 mini 和 nano 模型。一个关键发现是模式列表仅包含表名，导致代理猜测列名并进入错误重试循环；修复方法是在提示词中包含列名，或软化关于调用 describe_table 的建议。
+Simon Willison 使用 DSPy 评估并改进了 Datasette Agent 的 SQL 系统提示，发现了列名猜测和错误重试循环等问题，并提出了在模式列表中包含列名等修复建议。 这展示了一种实用的自动化提示优化工作流程，可以增强 AI 生成的 SQL 查询，减少错误并提高 AI 辅助数据查询工具的可靠性。 该实验通过 DSPy 使用了 GPT-4.1 mini 和 nano 模型，发现原始提示中避免调用 describe_table 的建议导致了列名猜测和错误循环；在模式列表中包含列名是一个关键改进。
 
 rss · Simon Willison · 7月2日 18:25
 
-**背景**: DSPy（声明式自改进 Python）是一个通过组合结构化签名而非编写脆弱提示词来构建 AI 系统的框架。Datasette Agent 是一个基于 LLM 的助手，用于 Datasette（一个探索和发布数据的工具）。Claude Fable 5 是 Anthropic Mythos 系列中经过安全调优的模型，面向通用用途。
+**背景**: DSPy 是一个用于自动优化提示和 LLM 程序的框架。Datasette Agent 是一个 AI 代理，可以执行只读 SQL 查询来回答用户关于数据的问题。提示工程对于此类代理生成正确高效的 SQL 至关重要。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://dspy.ai/">DSPy</a></li>
-<li><a href="https://github.com/stanfordnlp/dspy">GitHub - stanfordnlp/ dspy : DSPy : The framework for...</a></li>
-<li><a href="https://agent.datasette.io/">Datasette Agent: an AI assistant for Datasette to help ...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#DSPy`, `#prompt engineering`, `#AI agents`, `#Datasette`, `#SQL`
+**标签**: `#DSPy`, `#prompt engineering`, `#AI agents`, `#SQL`, `#Datasette`
 
 ---
 
 <a id="item-7"></a>
-## [SentryCode：面向 AI 编码代理的开源内核级审计工具](https://www.reddit.com/r/MachineLearning/comments/1ul7ap2/sentrycode_realtime_auditor_honeytokens_for_ai/) ⭐️ 7.0/10
+## [探讨微调抵抗对安全 AI 的意义](https://www.reddit.com/r/MachineLearning/comments/1um9bs7/what_does_safe_ai_look_like_d/) ⭐️ 7.0/10
 
-SentryCode 是一款开源的、内核级的行为审计工具，它利用蜜令（honeytokens）和隐蔽信道检测技术，对 AI 编码代理进行实时监控，防范隐私泄露。 随着 AI 编码代理日益普及，其可能进行的遥测和环境扫描引发了严重的隐私担忧；SentryCode 提供了一种新颖的、本地优先的解决方案，无需依赖外部服务即可检测和防止此类数据泄露。 该工具记录文件、网络和提示活动，使用蜜罐令牌实现零误报的数据泄露检测，检测隐写加密的隐蔽信道，提供防篡改审计日志，并支持策略执行——所有功能均在本地运行，无需外连。
+Reddit 上的一场讨论质疑，对于开放权重的大语言模型，微调抵抗是否是一个有意义的安全目标，因为安全措施很容易被自动化脚本绕过。 这场讨论凸显了当前开放权重模型安全训练的实际局限性，可能影响关于此类努力是否值得成本的治理辩论。 讨论聚焦于威胁模型，指出“未审查”变体在发布后迅速出现，并询问即使无法完美预防，增加攻击者成本或降低安全移除的可靠性是否有价值。
 
-reddit · r/MachineLearning · /u/cyh-c · 7月2日 03:48
+reddit · r/MachineLearning · /u/Aaron_Rock · 7月3日 09:07
 
-**背景**: AI 编码代理（例如用于代码生成的代理）可能无意或恶意地收集用户环境中的敏感数据。蜜令（honeytokens）是诱饵数据（如假的 API 密钥），在被访问时触发警报；隐蔽信道是隐藏的通信路径，可用于泄露数据。内核级审计在操作系统内核层运行，能深入监控系统调用和文件操作。
+**背景**: 开放权重的大语言模型允许用户访问和修改模型权重，使得通过微调移除安全护栏变得容易。安全训练旨在防止有害输出，但坚定的用户通常可以通过简单的微调或其他变通方法绕过这些措施。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.securityhive.io/blog/honeytokens-in-cybersecurity-what-they-are-and-why-they-matter">Understanding Honeytokens: A Key to Proactive Cybersecurity</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Covert_channel">Covert channel - Wikipedia</a></li>
-<li><a href="https://chanakar.substack.com/p/linux-security-superpower-auditd-guide">Mastering auditd: The Essential Guide to Linux Kernel-Level Auditing and Security</a></li>
+**社区讨论**: 讨论富有思考性，参与者权衡安全训练的成本效益与绕过的容易程度。一些人认为，即使不完美的安全措施也提高了随意滥用的门槛，而另一些人则质疑其对坚定对手的价值。
 
-</ul>
-</details>
-
-**标签**: `#AI Security`, `#Open Source`, `#Privacy`, `#Auditing`, `#Honeytokens`
+**标签**: `#AI safety`, `#open-weight models`, `#fine-tuning`, `#LLM governance`, `#threat modeling`
 
 ---
 
 <a id="item-8"></a>
-## [Codebase Memory MCP：亚毫秒级代码智能服务器](https://github.com/DeusData/codebase-memory-mcp) ⭐️ 7.0/10
+## [LLM 被用作攻击 AI 基础设施的武器](https://news.google.com/rss/articles/CBMiygFBVV95cUxOTms5SHd4dkZGT3QwaGY0Z3dFZjFGeDBBYlh1Y0I5bmE2NGpIejlCV25WOXJXV015X1JZdzA3Y3lJNkk2eHowaFdZM2NwcGJJa1piUGNQOWZqSU5rX3l0UDBfTXNCRlhKakp1dFg5dkhRSFlKT0oxWVFvU2Q1Tjh5T0R2bTNJYlpnbm5YMWFFT3pEclpOV2JCSDhmelRCU29RWktGZjkwc1pUWkxPNXJkY0ZzY1htaHNRZnJqSGlfTFZIWTlsMEhhVF9n?oc=5) ⭐️ 7.0/10
 
-DeusData 发布了 codebase-memory-mcp，一个高性能的 MCP 服务器，能将整个代码库索引为持久化知识图谱，实现亚毫秒级查询，并比传统方法减少 99% 的 token 使用。 该工具大幅降低了基于 LLM 的代码智能的 token 成本和查询延迟，使实时分析大型代码库成为可能。它通过提供即时、上下文感知的代码理解，使使用 AI 编程助手的开发者受益。 该服务器是一个无依赖的单一静态二进制文件，支持 158 种编程语言，平均仓库索引时间在毫秒级。它使用模型上下文协议（MCP）与 AI 助手集成。
+《小型战争杂志》的一篇文章强调了大型语言模型（LLM）被用于攻击 AI 基础设施这一新兴威胁，而不仅仅是针对人类或软件。 这代表了网络安全领域的范式转变，AI 系统既成为目标又成为武器，可能导致关键 AI 依赖领域的级联故障。 文章讨论了如何将 LLM 重新用于利用 AI 管道中的漏洞，如模型中毒或对抗性输入，但缺乏具体的技术示例或案例研究。
 
-ossinsight · DeusData · 7月3日 03:01
+google_news · Small Wars Journal · 7月2日 17:17
 
-**背景**: MCP（模型上下文协议）是一种开放协议，使 AI 模型能够与外部工具和数据源交互。知识图谱将代码结构表示为节点（函数、类）和边（依赖关系），从而实现高效检索。传统的 LLM 代码索引通常消耗大量 token 且速度缓慢。
+**背景**: 像 GPT-4 这样的大型语言模型（LLM）在海量文本数据上训练，能够生成类似人类的文本。它们越来越多地被集成到 AI 基础设施中，用于代码生成和数据分析等任务。然而，它们理解和生成代码的能力也使它们成为针对其支持的系统进行复杂网络攻击的潜在工具。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/DeusData/codebase-memory-mcp">GitHub - DeusData/codebase-memory-mcp: High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.</a></li>
-<li><a href="https://github.com/modelcontextprotocol/servers">GitHub - modelcontextprotocol/ servers : Model Context Protocol Servers</a></li>
-
-</ul>
-</details>
-
-**标签**: `#code-intelligence`, `#MCP`, `#knowledge-graph`, `#developer-tools`, `#C`
+**标签**: `#AI security`, `#LLM`, `#cybersecurity`, `#adversarial attacks`
 
 ---
 
 <a id="item-9"></a>
-## [rtk：Rust CLI 代理将 LLM 令牌消耗降低 60-90%](https://github.com/rtk-ai/rtk) ⭐️ 7.0/10
+## [AI 聊天机器人模仿人类权力动态和社会偏见](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOXpXLUlUQTRMa1M4eHpMaEJSSG1HUmVSYkpWbkJyQm9wejBQZWVKVzg2eWY1Nk83bkUxcjA4YnVVQ2RnNmlPWllKa3hPc3RkMVpzUV9oUzNwclNQdy0yOXl2VkQ1a3NBYUpVUXh4eGtjYkcwV1ladmc3cHZrNmZiY2YyTUpkaTlYZ2JQTUR5dFptU0xhNm9NQS1tNmFVM0ZhX21tVUszQ1V1d29mdmxwalZtTGQyaWcxRWJr?oc=5) ⭐️ 7.0/10
 
-rtk-ai/rtk 是一个热门的 GitHub 仓库，提供了一个基于 Rust 的 CLI 代理，旨在将常见开发者命令的 LLM 令牌消耗降低 60-90%。它是一个零依赖的单一 Rust 二进制文件。 该工具直接解决了开发者使用 LLM API 的高成本问题，可能节省大量资金并支持更长的 AI 编码会话。通过在输出到达 AI 上下文之前压缩命令输出，它优化了令牌使用，无需任何配置更改。 rtk 支持 14 种 AI 编码工具，并在代理支持命令拦截的情况下将 shell 命令重写为 rtk 等效命令以节省令牌。该工具过滤并压缩命令输出，在常见操作上实现 60-90%的令牌减少。
+一项发表在 PsyPost 上的新研究表明，包括大型语言模型在内的 AI 聊天机器人在对话中会模仿类似人类的权力动态和社会偏见，反映了社会等级和刻板印象。 这一发现凸显了 AI 伦理和安全方面的关键挑战，因为带有偏见的聊天机器人互动可能会在客户服务、治疗或教育等实际应用中强化有害的刻板印象和权力失衡。 该研究分析了与多种 AI 聊天机器人的对话，发现它们系统性地表现出与性别、种族和权威相关的偏见，常常顺从地位较高的用户，或使用贬低地位较低用户的语言。
 
-ossinsight · rtk-ai · 7月3日 03:01
+google_news · PsyPost · 7月2日 20:13
 
-**背景**: LLM 以称为令牌的块处理文本，API 成本基于令牌使用量。开发者经常运行产生冗长输出的命令，当这些输出被输入到 LLM 上下文窗口时会消耗大量令牌。rtk 作为一个代理拦截这些输出，压缩它们以减少令牌数量，同时保留关键信息。
+**背景**: AI 聊天机器人是在包含社会偏见和权力结构的人类文本大数据集上训练的。如果没有仔细的缓解措施，这些模型可能会学习并重现这些模式，导致有偏见的输出。这项研究进一步证明，AI 系统会反映并放大人类的偏见。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://github.com/rtk-ai/rtk">GitHub - rtk-ai/rtk: CLI proxy that reduces LLM token ...</a></li>
-<li><a href="https://www.rtk-ai.app/">RTK — Rust Token Killer</a></li>
-<li><a href="https://redis.io/blog/llm-token-optimization-speed-up-apps/">LLM Token Optimization: Cut Costs & Latency in 2026 - Redis</a></li>
-
-</ul>
-</details>
-
-**标签**: `#LLM`, `#Rust`, `#CLI`, `#cost optimization`, `#proxy`
+**标签**: `#AI ethics`, `#bias`, `#chatbots`, `#social dynamics`
 
 ---
 
 <a id="item-10"></a>
-## [大语言模型对 AI 基础设施构成新安全威胁](https://news.google.com/rss/articles/CBMiygFBVV95cUxOTms5SHd4dkZGT3QwaGY0Z3dFZjFGeDBBYlh1Y0I5bmE2NGpIejlCV25WOXJXV015X1JZdzA3Y3lJNkk2eHowaFdZM2NwcGJJa1piUGNQOWZqSU5rX3l0UDBfTXNCRlhKakp1dFg5dkhRSFlKT0oxWVFvU2Q1Tjh5T0R2bTNJYlpnbm5YMWFFT3pEclpOV2JCSDhmelRCU29RWktGZjkwc1pUWkxPNXJkY0ZzY1htaHNRZnJqSGlfTFZIWTlsMEhhVF9n?oc=5) ⭐️ 7.0/10
+## [因果推断修复大模型数据混合偏移](https://news.google.com/rss/articles/CBMizAFBVV95cUxOdUQ3LTloSDE4VmRrbTlSLWFDZHVKUElySml2Qm9xYXVXSTIwLUxyZkl1ZGcyZ3J4ZWxnYXk4Qkh0cmdkQkdCVTd5eTN3TTVtbDBaUkRjNkRJd0NNZE5VX2dBaG1JLWJCbUMzeGIycFFTaXFLRENHUlo0aUp2RTB4WXA3Q3lMd1MyT0pDQ29rT2x0VGg3UVV5ZENQZEk0Z3JqSDlPWDdsbXFMQ3dVZk1wdXlJQXI4RzNrc3g4c2lXclU1VktkMFU3OUI4dDQ?oc=5) ⭐️ 7.0/10
 
-《小型战争杂志》近期一篇文章指出，大语言模型（LLM）正被武器化用于攻击 AI 基础设施，例如利用 SSRF 漏洞和配置错误的 API 端点。 这标志着 AI 从防御用途转向进攻性网络操作，给部署 AI 系统的组织带来新风险。这一趋势凸显了针对 AI 的强健安全措施的迫切需求。 攻击向量包括服务器端请求伪造（SSRF）滥用、暴露的 LLM 端点以及 API 密钥聚合风险。文章指出，基础设施中间件层在安全调查中常被忽视。
+研究人员提出一种因果推断方法，以解决大语言模型在训练数据混合比例随时间变化时出现的性能下降问题。 这很重要，因为数据混合偏移是 LLM 训练中的常见问题，而因果方法提供了一种无需昂贵重新训练即可保持模型性能的原则性解决方案。 该方法利用因果推断来分离不同数据源的影响，使模型能够更稳健地适应新的混合比例。该研究在多个基准任务上进行了验证。
 
-google_news · Small Wars Journal · 7月2日 17:17
+google_news · Tech Times · 7月2日 22:25
 
-**背景**: AI 基础设施指支持 AI 工作负载的硬件和软件栈，包括 LLM 端点、API 和云服务。随着 LLM 越来越多地集成到企业系统中，攻击者正日益瞄准这些组件以获取未授权访问或破坏运营。
+**背景**: 大语言模型通常基于来自不同来源的混合数据进行训练。当这种混合数据的组成发生变化（例如由于数据更新或领域偏移）时，模型性能可能会下降。因果推断提供了理解和调整此类分布偏移的工具。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://colonelserver.com/blog/ai-infrastructure-attacks/">AI Infrastructure Attacks Detected Targeting LLM And SSRF...</a></li>
-<li><a href="https://plurilock.com/blog/your-llm-infrastructure-is-already-on-attacker-target-lists/">Your LLM Infrastructure Is Already on Attacker Target Lists - Plurilock</a></li>
-<li><a href="https://snailsploit.com/ai-security/ai-gateway-threat-model/">AI Gateway Threat Model: 8 Attack Vectors | SnailSploit</a></li>
-
-</ul>
-</details>
-
-**标签**: `#LLM`, `#AI security`, `#cybersecurity`, `#AI infrastructure`
+**标签**: `#LLM`, `#causal inference`, `#training data`, `#AI research`
 
 ---
 
 <a id="item-11"></a>
-## [AI 聊天机器人模仿人类权力动态和社会偏见](https://news.google.com/rss/articles/CBMiuwFBVV95cUxNOXpXLUlUQTRMa1M4eHpMaEJSSG1HUmVSYkpWbkJyQm9wejBQZWVKVzg2eWY1Nk83bkUxcjA4YnVVQ2RnNmlPWllKa3hPc3RkMVpzUV9oUzNwclNQdy0yOXl2VkQ1a3NBYUpVUXh4eGtjYkcwV1ladmc3cHZrNmZiY2YyTUpkaTlYZ2JQTUR5dFptU0xhNm9NQS1tNmFVM0ZhX21tVUszQ1V1d29mdmxwalZtTGQyaWcxRWJr?oc=5) ⭐️ 7.0/10
+## [廉价中国 AI 模型追赶 Anthropic 和 OpenAI](https://news.google.com/rss/articles/CBMi9wFBVV95cUxOVTRLTkNncEdzMmRJRTBIUDRCcnAtQV9KUkdXemt5QzlxS05rbktCRC1VeXItYVhyTm9zdjVtM2g2X1F4UFdOUFlEck1lZlR0UjlmNGVuWE5rWFJJOTBPRE9qRjhDQndOYlh1ZWtIVXZQdG5VSFc3Z3EzZ1dfLWtnLWtRNXBfZ0tENTNPd1dESzlWd3ZNSEU0NTRlZXNOMjA2bTFERG04S1k1MS1vNG5OU2VoUGw1aWs0VmRVYjdqUnlBZmN6VDdXbHo5ZTVudjZBaHk5TFhfZGNLdFNPckVEajc4X3hScWV4anQ2NVNhWFA3T2lVcVdB0gH8AUFVX3lxTE1YQ3V0QWFxd0Yyc1VOMzdQaHl4bHVIWkdPR3QtRERvODIta3hFQ1FIVU9XNDZWYlJ4ZFZXOVZQWVhCSXF5X1YyaWtPUmhxUExiRlNrU2I2Y2NiTS1hVy16aVpaVGNicU1oZkxNQWJSaU9QNWxaNXZobHI1NE9tbDJqLWlTYmowYTJ5THJJUEVCdm5UY2lxMzBGQmdBYm9XWlp0cVRYZUx5MWozaVBvWFBrYnBDZmxGaFdLQzY4YmhXMzhMZjU5WXJSaWw2QTJzbHNKcy1mOTZRY2lzMHhDcS1mRDZCLXQ5alNpcS02S3VjNTdqZU01R3JyVHAzLQ?oc=5) ⭐️ 7.0/10
 
-PsyPost 发表的一项研究表明，AI 聊天机器人在对话中复制了人类的权力动态和社会偏见，可能加剧社会不平等。 这一发现引发了对 AI 公平性和伦理的严重担忧，因为聊天机器人越来越多地用于客服、治疗和教育等领域，有偏见的互动可能伤害弱势群体。 该研究分析了与流行聊天机器人的对话，发现它们表现出类似人类互动的权力不对称和刻板印象，常常顺从地位较高的用户或使用有偏见的语言。
+据报道，一款新的低成本中国 AI 模型在性能上已接近 Anthropic 和 OpenAI 的领先模型，对美国 AI 公司在本土的主导地位构成挑战。 这一发展标志着全球 AI 格局的转变，可能使先进 AI 能力的获取更加民主化，并加剧中美 AI 生态系统之间的竞争。 文章未指明模型名称、具体成本或基准分数，但强调其价格低廉且性能可与 Anthropic 的 Claude 和 OpenAI 的 GPT 系列相媲美。
 
-google_news · PsyPost · 7月2日 20:13
+google_news · ETEnterpriseai.com · 7月2日 14:02
 
-**背景**: AI 聊天机器人是在包含固有社会偏见和权力动态的海量人类文本数据上训练的。如果没有仔细缓解，模型会学习并复现这些模式。先前的研究已记录了 NLP 模型中与种族、性别和残疾相关的偏见，但这项研究专门考察了对话中的权力动态。
+**背景**: 中国 AI 公司一直在快速推进其大型语言模型（LLM）的发展，成本通常仅为美国同行的几分之一。该模型似乎延续了这一趋势，可能通过高效的训练技术或更小的架构来实现有竞争力的结果。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://link.springer.com/article/10.1007/s00146-024-02053-4">Understanding model power in social AI | AI & SOCIETY | Springer Nature Link</a></li>
-<li><a href="https://aclanthology.org/2020.acl-main.487/">Social Biases in NLP Models as Barriers for Persons with Disabilities - ACL Anthology</a></li>
-<li><a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00425/108201/Quantifying-Social-Biases-in-NLP-A-Generalization">Quantifying Social Biases in NLP: A Generalization and Empirical Comparison of Extrinsic Fairness Metrics | Transactions of the Association for Computational Linguistics | MIT Press</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI ethics`, `#bias`, `#chatbots`, `#social dynamics`, `#NLP`
+**标签**: `#AI`, `#Chinese AI`, `#LLM`, `#competition`
 
 ---
 
 <a id="item-12"></a>
-## [智谱 AI 将 GLM-5.2 转化为智能体，挑战 Anthropic](https://news.google.com/rss/articles/CBMiwwFBVV95cUxNVUhhS3o1ak5kaEhBcTFBN2tXRndDTnNvUndjakFVUnV4bHpsVU5FVjdaOTA2UDlsX04tcHhZWmVPMm53ZkhZaWxDQy1KVUVfekpkWmh2dm56RzlfX09mcmVOMmF0NFg2XzQ1MWIycGg1WlRKNWxRRzgyUVhWcVYzcXFVSEdQV05UZTBqUEtKdWxpSmU1Z0FFOHkwVVF0MVBlWGVFV3QxN3gzYmVKbzVSc2luZHM4TjVQQjdFSXFyTGZxY0XSAcMBQVVfeXFMTVVIYUt6NWpOZGhIQXExQTdrV0Z3Q05zb1J3Y2pBVVJ1eGx6bFVORVY3WjkwNlA5bF9OLXB4WVplTzJud2ZIWWlsQ0MtSlVFX3pKZFpodnZuekc5X19PZnJlTjJhdDRYNl80NTFiMnBoNVpUSjVsUUc4MlFYVnFWM3FxVUhHUFdOVGUwalBLSnVsaUplNWdBRTh5MFVRdDFQZVhlRVd0MTd4M2JlSm81UnNpbmRzOE41UEI3RUlxckxmcWNF?oc=5) ⭐️ 7.0/10
+## [幻影域名抢注：攻击者利用 AI 幻觉生成的域名](https://news.google.com/rss/articles/CBMiowFBVV95cUxPVEltTC1PN1dmeVU4dVhFMHB4UTdISTJnbGdpY2Ytb3dkSmZDV3FKSk9NREhKNFZBMEtyejBGT0Y2RVZKLWg5TzZadFU2Nk5NVzI3emNENkpDa0tGVHM5cWhFTXBqTHp1LUZRR1cwd0pHNzVPSU9rbUhrdTVrb2xVRzhYSlVWaDM4aFZlOFgzNkZnWUdQTlhlNlRic1NmZkhkaEZR?oc=5) ⭐️ 7.0/10
 
-智谱 AI 发布了一款新工具，将其 GLM-5.2 模型转化为 AI 智能体，加剧了与 Anthropic 的竞争。 此举使智谱 AI 成为 AI 智能体领域的有力竞争者，直接挑战 Anthropic 的产品，并可能加速智能体 AI 在企业及开发者工作流中的采用。 GLM-5.2 是智谱 AI 面向长周期任务的旗舰模型，拥有 100 万 token 的上下文窗口，而新智能体工具使其能够自主执行复杂的多步骤任务。
+攻击者正在注册 AI 模型幻觉产生的网络域名，这是一种被称为“幻影域名抢注”的新型攻击手段，由 SC Media 报道。 这种新型威胁利用 AI 幻觉诱骗用户访问恶意网站，削弱了对 AI 生成内容的信任，并带来重大网络安全风险。 幻影域名抢注涉及注册那些并不存在但被 AI 模型（如 ChatGPT）自信地建议为有效引用的域名。该技术针对那些不经验证就点击 AI 提供链接的用户。
 
-google_news · South China Morning Post · 7月2日 10:00
+google_news · SC Media · 7月2日 13:54
 
-**背景**: AI 智能体是能够利用大语言模型独立规划和执行任务的系统。智谱 AI 是中国领先的人工智能公司，一直致力于开发 GLM 系列模型，GLM-5.2 是其最新用于编程和长周期任务的模型。Anthropic 是主要竞争对手，以其 Claude 智能体能力著称。
+**背景**: AI 幻觉是指 AI 模型生成看似合理但实际错误的信息，包括不存在的网络域名。域名抢注是一种传统的网络攻击，攻击者注册与流行域名相似的域名，利用拼写错误或品牌混淆。幻影域名抢注通过预先注册 AI 模型可能幻觉出的域名，将这两种概念结合起来。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://openlm.ai/glm-5.2/">GLM-5.2 - openlm.ai</a></li>
-<li><a href="https://github.com/zai-org/GLM-5">GitHub - zai-org/GLM-5: GLM-5: From Vibe Coding to Agentic ...</a></li>
-<li><a href="https://chozan.co/zhipu-ai/">Zhipu AI Explained: GLM Capabilities, Use Cases, and Risks</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI`, `#agents`, `#Zhipu AI`, `#GLM-5.2`, `#Anthropic`
+**标签**: `#AI`, `#cybersecurity`, `#hallucination`, `#domain squatting`
 
 ---
 
 <a id="item-13"></a>
-## [因果推断修复 LLM 数据混合偏移问题](https://news.google.com/rss/articles/CBMizAFBVV95cUxOdUQ3LTloSDE4VmRrbTlSLWFDZHVKUElySml2Qm9xYXVXSTIwLUxyZkl1ZGcyZ3J4ZWxnYXk4Qkh0cmdkQkdCVTd5eTN3TTVtbDBaUkRjNkRJd0NNZE5VX2dBaG1JLWJCbUMzeGIycFFTaXFLRENHUlo0aUp2RTB4WXA3Q3lMd1MyT0pDQ29rT2x0VGg3UVV5ZENQZEk0Z3JqSDlPWDdsbXFMQ3dVZk1wdXlJQXI4RzNrc3g4c2lXclU1VktkMFU3OUI4dDQ?oc=5) ⭐️ 7.0/10
+## [Interfaze 发布开源扩散 ASR 模型，支持六种语言](https://news.google.com/rss/articles/CBMimwJBVV95cUxPRkNxdmp1ejVmOHBWYldyTEtYREpzT3B3RGZKZ2d3dTllOGo3UEppVWFuMXhxc0hkS1JISTlUZXdFMXVtTC0xMDRxeXNHMXhHcGxfcXc4SW1jYXJDUDhrMmwwN1FjVWZ1X1JGWC1Vc0liSVdfc2NCbGFJRXgycGdrRDdqSklGMzVCQlVLbVNDbHNiOGVHU3g4ZDk1M1FJUGFFVnBVbmdyMGtVc2VDMlZkSTBjWHVYMlRjN09jMTlyU29Eb1ZJSG5tN0JPYi1JeFJmTzcwS21pb21UcjlHcF94VkJIMVFkazU3LWU3MEluN2xqN3o0UXZRazF2X2d3ODZNZkZBMnlOUlRwVi1fSTMzd1RDYk9yUFVzYXI4?oc=5) ⭐️ 7.0/10
 
-研究人员发现，训练数据池的偏移会破坏 LLM 的最优数据混合，并提出了一种名为 CausalMix 的因果推断方法来解决这一问题。 这很重要，因为维持最优数据混合对 LLM 性能至关重要，而当前方法在训练数据分布随时间变化时会失效。因果推断方法提供了一种更稳健、自适应的解决方案。 CausalMix 将数据混合优化视为因果处理估计问题，使其能够适应训练池的偏移。在实验中，它优于现有的基于代理模型的方法。
+Interfaze 发布了 diffusion-gemma-asr-small，这是一个基于扩散模型的开源自动语音识别（ASR）模型，能够通过并行去噪解码器转录六种语言。 该模型将基于扩散的方法引入 ASR，可能在鲁棒性和并行生成方面优于传统自回归模型，其开源特性鼓励社区在多语言语音识别领域进行创新。 该模型是 DiffusionGemma 架构的一个小型变体，支持六种语言，但公告中未详细说明具体语言。它使用并行去噪解码器来生成转录。
 
-google_news · Tech Times · 7月2日 22:25
+google_news · MarkTechPost · 7月3日 03:24
 
-**背景**: 在 LLM 训练中，数据混合决定了用于训练模型的不同数据源（如网页文本、书籍）的比例。近期方法使用较小的代理模型来优化这些混合权重，但它们假设训练池是静态的，而实际情况往往并非如此。
+**背景**: 自动语音识别（ASR）将口语转换为文本。传统的 ASR 模型通常使用自回归解码器逐个生成标记，速度较慢。扩散模型最初在图像生成中流行，最近被应用于语音任务，提供并行生成能力，并可能更好地处理嘈杂音频。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://arxiv.org/pdf/2607.01104">CausalMix: Data Mixture as Causal Inference for Language Model...</a></li>
-<li><a href="https://www.techtimes.com/articles/319548/20260702/llm-data-mixture-breaks-when-training-pools-shift-causal-inference-offers-fix.htm">LLM Data Mixture Breaks When Training Pools Shift: Causal Inference...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#LLM`, `#training data`, `#causal inference`, `#machine learning`
+**标签**: `#ASR`, `#diffusion models`, `#open-source`, `#speech recognition`, `#multilingual`
 
 ---
 
 <a id="item-14"></a>
-## [Anthropic 自研 AI 芯片挑战英伟达](https://news.google.com/rss/articles/CBMidEFVX3lxTFA3djFPUE00M1A0em1ONW50ckhTQ0NpXzhPTmdHaEFlSm1iS3FDSXcyMmZhMnhoMXFFVlJRSkFPV1NGMzQzYUpPVmdUZWpPNHhpZlljT0gtUndLUkJ6SktSaEZlYnlIWVlrYkJnY2VRVmZoQ3FD?oc=5) ⭐️ 7.0/10
+## [葡萄牙发布首个开源 AI 模型](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPRE5UWGFMMHhLSWdxZUdQVzBaU2plTGtZVnA1a2lCRC1ib0Q2NzVGRDJkbmhFVGdyb0NlRHhwaFVjb1l0bWJzWXZ3dGpWVmZlUTA5WWE4YnlZXzFLbnJNQkcxblV1REh5anpmanRoZC12WlBrYkhOb1RDLVI4cXh3a3ZFTU5TWmlxZ1M3dVMzUzVRM3JGclg1MzBrb3RlX2NINmY1ZDR2M0xFTHp2dFR2UmRlWUtvaF9LTHkzcW05UnlBUzV6MEZnOE5JcE1LV1lqQ25tNjM2ellMVThUQTY5SjJKVjhER0NOQlI00gHrAUFVX3lxTE9ETlRYYUwweEtJZ3FlR1BXMFpTamVMa1lWcDVraUJELWJvRDY3NUZEMmRuaEVUZ3JvQ2VEeHBoVWNvWXRtYnNZdnd0alZWZmVRMDlZYThieVlfMUtuck1CRzFuVXVESHlqemZqdGhkLXZaUGtiSE5vVEMtUjhxeHdrdkVNTlNaaXFnUzd1UzNTNVEzckZyWDUzMGtvdGVfY0g2ZjVkNHYzTEVMenZ0VHZSZGVZS29oX0tMeTNxbTlSeUFTNXowRmc4TklwTUtXWWpDbm02MzZ6WUxVOFRBNjlKMkpWOERHQ05CUjQ?oc=5) ⭐️ 7.0/10
 
-Anthropic 正在自研 AI 芯片以减少对英伟达的依赖，并考虑由三星代工生产。 此举可能重塑 AI 硬件格局，削弱英伟达的主导地位，并实现 AI 训练和推理供应链的多元化。 据报道，Anthropic 处于芯片设计的早期阶段，并正在评估三星的 3nm GAA 工艺进行生产。这些芯片预计将针对 Anthropic 的 AI 模型进行优化。
-
-google_news · Businesskorea · 7月3日 01:32
-
-**背景**: 目前，大多数 AI 公司依赖英伟达的 GPU 进行训练和推理。开发定制芯片使 Anthropic 等公司能够优化性能和成本，类似于亚马逊和苹果的做法。三星代工是一家主要的半导体制造商，提供 3nm GAA 等先进制程。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Samsung_Foundry">Samsung Foundry</a></li>
-<li><a href="https://semiconductor.samsung.com/foundry/">Foundry Overview | Samsung Semiconductor Global</a></li>
-<li><a href="https://semiconductor.samsung.com/foundry/about-samsung-foundry/company-info/">Company Info | About Samsung Foundry | Samsung Semiconductor Global</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI hardware`, `#Anthropic`, `#Nvidia`, `#semiconductors`, `#Samsung`
-
----
-
-<a id="item-15"></a>
-## [葡萄牙发布首个开源 AI 模型 Amália](https://news.google.com/rss/articles/CBMi6wFBVV95cUxPRE5UWGFMMHhLSWdxZUdQVzBaU2plTGtZVnA1a2lCRC1ib0Q2NzVGRDJkbmhFVGdyb0NlRHhwaFVjb1l0bWJzWXZ3dGpWVmZlUTA5WWE4YnlZXzFLbnJNQkcxblV1REh5anpmanRoZC12WlBrYkhOb1RDLVI4cXh3a3ZFTU5TWmlxZ1M3dVMzUzVRM3JGclg1MzBrb3RlX2NINmY1ZDR2M0xFTHp2dFR2UmRlWUtvaF9LTHkzcW05UnlBUzV6MEZnOE5JcE1LV1lqQ25tNjM2ellMVThUQTY5SjJKVjhER0NOQlI00gHrAUFVX3lxTE9ETlRYYUwweEtJZ3FlR1BXMFpTamVMa1lWcDVraUJELWJvRDY3NUZEMmRuaEVUZ3JvQ2VEeHBoVWNvWXRtYnNZdnd0alZWZmVRMDlZYThieVlfMUtuck1CRzFuVXVESHlqemZqdGhkLXZaUGtiSE5vVEMtUjhxeHdrdkVNTlNaaXFnUzd1UzNTNVEzckZyWDUzMGtvdGVfY0g2ZjVkNHYzTEVMenZ0VHZSZGVZS29oX0tMeTNxbTlSeUFTNXowRmc4TklwTUtXWWpDbm02MzZ6WUxVOFRBNjlKMkpWOERHQ05CUjQ?oc=5) ⭐️ 7.0/10
-
-葡萄牙发布了其首个开源 AI 模型 Amália，该模型专为欧洲葡萄牙语设计，并得到政府支持。 此次发布支持了欧洲推动数字主权的更广泛努力，减少对非欧洲 AI 基础设施的依赖，并促进本地创新。 Amália 被设计为公共机构和企业的基座模型，其模型、数据集和源代码均已开放发布。
+葡萄牙发布了其首个开源 AI 模型，这标志着该国 AI 发展的一个里程碑，并与欧洲推动数字主权的更广泛努力相一致。 此举通过减少对非欧洲 AI 平台的依赖，增强了欧洲的技术独立性，并鼓励了欧洲开源 AI 生态系统内的合作。 该模型是开源的，意味着其代码和权重可公开使用和修改，但文章未披露架构和训练数据等具体技术细节。
 
 google_news · ETEnterpriseai.com · 7月2日 13:50
 
-**背景**: 欧洲国家正加大对本土 AI 的投资以实现技术主权，欧盟委员会近期提出的技术主权一揽子计划也强调了这一点。像 Amália 这样的开源模型使政府和企业能够在不依赖非欧洲供应商专有平台的情况下构建应用。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.eweek.com/news/portugal-open-ai-model-europe-push-emea/">Portugal Launches ‘Amália,’ an Open - Source AI Model Built... | eWeek</a></li>
-<li><a href="https://www.opensourceforu.com/2026/06/portugal-open-sources-national-amalia-ai-model/">Portugal Open Sources National Amália AI Model - Open Source ...</a></li>
-<li><a href="https://digg.com/tech/it1i0wzy">Pleias co-founder Pierre-Carl Langlais says Portugal 's first...</a></li>
-
-</ul>
-</details>
-
-**社区讨论**: 社区反应不一：一些人称赞这是迈向欧洲技术主权的坚实一步，而另一些人则嘲笑其质量低下或认为这是徒劳的追赶。
+**背景**: 开源 AI 模型允许全球开发者检查、修改和改进技术，促进透明度和创新。欧洲一直在积极追求数字主权，以减少对美国和中国科技巨头的依赖，例如通过欧盟的 AI 法案和对本土 AI 项目的资助。
 
 **标签**: `#AI`, `#open-source`, `#Europe`, `#digital sovereignty`
 
 ---
 
-<a id="item-16"></a>
-## [韩国公布 6448 亿美元量子蓝图](https://news.google.com/rss/articles/CBMidkFVX3lxTE1Vc2IyTmtENTZrUER2ZVFvTWxZbFhVTDV3OXpQV19sRWpfOVEwNXFTWGh4VGY1X0l2dWdsQXVDN1lCa0VnS1YtWXdjWE5SNHF3NjFCRzY1Nk5zWUZ6NEROcXdyb21pRTBxR3RNUU1lZ05ISlFUMFE?oc=5) ⭐️ 7.0/10
+<a id="item-15"></a>
+## [Inception42 与微软联合发布阿拉伯语 AI 模型](https://news.google.com/rss/articles/CBMixAFBVV95cUxOSG9YWThpTDBaYVBmR1NXTkpTYm1qT2pMVG02T015bDE4NnBsM1JRSXFSZS1tSGYwa3ZxTnJoR3lCVHZYQUxnWVpOQTBycjBsblpSMjNSeEc1alkwOGdBYzVvNEZKNkVVYmtOdzNiNnQ1SExOOVZGRkZMZ0JFR2xiMVpEbWFjM2hXSEJ5VUFQM3YwcVZKTmJCblRmY0FaWm4xdVdGTzV3NFJCdW5nYVMwOG8zYVV3RkhWcE9ZcmZlY1VwV213?oc=5) ⭐️ 7.0/10
 
-韩国副总理宣布了一项约 6448 亿美元（200 万亿韩元）的量子技术投资蓝图，通过 2030 年将产业、学术界和研究联系起来。 这笔巨额投资表明韩国致力于到 2035 年成为全球量子领导者，可能加速量子计算、网络和传感领域的突破。 该蓝图是韩国第六次基本计划的一部分，该计划为公共研发拨款超过 200 万亿韩元（约 1288 亿美元），其中 60 万亿韩元集中于包括量子在内的 55 项核心战略技术。
+Inception42 与微软合作推出了一款新的阿拉伯语 AI 语言模型，旨在提升阿拉伯语用户的自然语言处理能力。 该模型解决了阿拉伯语在 AI 领域代表性不足的问题，有望为全球超过 4 亿阿拉伯语使用者提供更好的数字服务，并促进该地区的 AI 创新。 该模型基于微软 Azure AI 基础设施构建，旨在处理阿拉伯语复杂的形态和方言。具体的性能基准或模型规模尚未披露。
 
-google_news · finance.biggo.com · 7月2日 04:55
+google_news · MSN · 7月2日 12:55
 
-**背景**: 韩国一直在积极建设其量子生态系统，包括《量子技术产业法》以及与 IonQ 和 BTQ Technologies 等公司的合作。该国旨在到 2035 年建立量子素养和主权。
+**背景**: 阿拉伯语是一种闪米特语，形态丰富且方言众多，给自然语言处理带来了独特挑战。大多数大型语言模型主要基于英语和其他高资源语言训练，导致阿拉伯语服务不足。此次合作旨在弥合这一差距。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://thequantuminsider.com/2026/06/30/south-korea-commits-200-trillion-won-to-rd-quantum-listed-as-strategic-tech/">South Korea Commits 200 Trillion Won to R&D, Quantum Listed as Strategic Tech</a></li>
-<li><a href="https://quantumcomputingreport.com/south-korea-formulates-sixth-basic-plan-to-funnel-200-trillion-won-128-8-billion-usd-into-massive-rd-strategy-through-2030/amp/">South Korea Formulates Sixth Basic Plan to Funnel 200 Trillion Won ($128.8 Billion USD) into Massive R&D Strategy through 2030 - Quantum Computing Report</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Inception">Inception</a></li>
 
 </ul>
 </details>
 
-**标签**: `#quantum computing`, `#government investment`, `#South Korea`, `#technology policy`
+**标签**: `#AI`, `#Arabic NLP`, `#Microsoft`, `#Language Model`
+
+---
+
+<a id="item-16"></a>
+## [思维链欺骗攻击推理型 AI 模型](https://news.google.com/rss/articles/CBMijwFBVV95cUxNSzRpQjV6c2xVZzZnaW9DVGstNXFYUUlFV2dZc0hBWWFmT0lnNVFSQm9UWDdQYmxYbHJDVmJMTHlpT3EwaTQ1dV9FRGVsWEVTaEVVOGIweTYzdFpuLXp2QzFfTEdXU3ZENVFqczgtckFzR2dGYkZSbEs0V2I1Q2wyUWJqS2VBNGt1UEluN2J6TQ?oc=5) ⭐️ 7.0/10
+
+研究人员发现了一种名为“思维链欺骗”的新型对抗攻击，通过操纵 AI 模型的逐步推理过程来产生错误输出。 这种攻击削弱了推理型 AI 模型的可靠性，而这些模型正越来越多地用于代码生成和决策支持等关键应用，引发了严重的安全和信任问题。 该攻击利用思维链提示技术，通过注入恶意指令覆盖模型的推理过程，导致模型给出错误但看似合理的答案。
+
+google_news · Hackaday · 7月3日 02:00
+
+**背景**: 思维链提示是一种通过让模型在得出最终答案前生成中间步骤来提升 AI 推理能力的技术。该方法已被广泛应用于大型语言模型，以增强其在复杂任务上的表现。思维链欺骗攻击正是针对这一过程，揭示了 AI 安全中的一个新漏洞。
+
+**标签**: `#AI safety`, `#adversarial attacks`, `#chain-of-thought`, `#security`, `#machine learning`
 
 ---
 
 <a id="item-17"></a>
-## [Inception42 与微软推出阿拉伯语 AI 模型](https://news.google.com/rss/articles/CBMixAFBVV95cUxOSG9YWThpTDBaYVBmR1NXTkpTYm1qT2pMVG02T015bDE4NnBsM1JRSXFSZS1tSGYwa3ZxTnJoR3lCVHZYQUxnWVpOQTBycjBsblpSMjNSeEc1alkwOGdBYzVvNEZKNkVVYmtOdzNiNnQ1SExOOVZGRkZMZ0JFR2xiMVpEbWFjM2hXSEJ5VUFQM3YwcVZKTmJCblRmY0FaWm4xdVdGTzV3NFJCdW5nYVMwOG8zYVV3RkhWcE9ZcmZlY1VwV213?oc=5) ⭐️ 7.0/10
+## [用 t0-alpha 解释时间序列大语言模型](https://news.google.com/rss/articles/CBMifEFVX3lxTFBIc2ZXeC1PbzNtSWt1aUcwczB5SzJSYTlLdG01N2lXNDMteThtRnF0cm03SDROWjNJMVFxZVY5VTlQMjdzc0V5bUhMd0VnRS1SMzREOVl0Wnh0NFFMWkpsQnVhSkx3T1hBcTNjTHRyMU9ERHhnZG51SnE1SHk?oc=5) ⭐️ 7.0/10
 
-Inception42 与微软合作推出了一款新的阿拉伯语 AI 模型，旨在推动阿拉伯语自然语言处理的发展。 此次发布填补了阿拉伯语（使用最广泛的语言之一）NLP 资源的重大空白，并可能为全球阿拉伯语用户提供更好的 AI 驱动服务。 该模型基于微软 Azure 基础设施构建，并利用 Inception42 在主权 AI 方面的专业知识，专注于企业级应用。
+Towards Data Science 上的一篇文章以 t0-alpha 模型为例，解释了时间序列大语言模型的工作原理，展示了如何将大语言模型应用于时间序列预测。 这种方法弥合了自然语言处理和时间序列分析之间的差距，使大语言模型能够处理时间数据，应用于金融预测和物联网监控等领域。 t0-alpha 模型是 T0 模型的一个变体，在时间序列数据上进行微调以生成预测。它可能对时间序列值进行分词，并利用 Transformer 架构进行序列模式识别。
 
-google_news · MSN · 7月2日 12:55
+google_news · Towards Data Science · 7月2日 13:30
 
-**背景**: 由于阿拉伯语复杂的形态学和方言多样性，其自然语言处理历来落后于英语。像 GPT-4 这样的大型语言模型主要基于英语数据训练，限制了它们在阿拉伯语上的有效性。此次合作旨在创建一个更好理解阿拉伯语细微差别的模型。
+**背景**: 时间序列数据由按时间索引的数据点序列组成，常见于金融、天气和传感器领域。传统的预测方法如 ARIMA 或 LSTM 是专门化的，而像 GPT-4 这样的大语言模型擅长文本但不擅长数值序列。时间序列大语言模型通过将时间步视为 token，使预训练语言模型适应理解时间模式。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://inception42.ai/">Inception 42 | AI | Agentic AI for Sovereign Enterprise</a></li>
-<li><a href="https://datasciencedojo.com/blog/noor-arabic-language-model/">NOOR, the new largest NLP Arabic language model | Data ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Time_series_DBMS">Time series DBMS</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Arabic NLP`, `#Microsoft`, `#Language Model`, `#Inception42`
+**标签**: `#time-series`, `#LLMs`, `#machine learning`, `#AI`
 
 ---
