@@ -138,3 +138,48 @@ def test_generate_empty_summary_zh_uses_localized_analyzed_line():
 
     assert "> 已分析 10 条内容，但没有达到重要性阈值的条目。" in result
     assert "Analyzed 10 items" not in result
+
+
+def test_generate_summary_ignores_market_impact_metadata():
+    summarizer = DailySummarizer()
+    item = _make_item(1)
+    item.metadata.update(
+        {
+            "market_impact_zh": "推理芯片新品可能带动 AI 算力基础设施需求。",
+            "market_impact_direction": "positive",
+            "market_impact_confidence": 0.86,
+            "market_impact_segments": ["AI芯片", "服务器"],
+            "market_impact_markets": [
+                {
+                    "market": "us",
+                    "direction": "positive",
+                    "segments": ["AI芯片", "服务器"],
+                    "rationale_zh": "美股AI算力基础设施链条可能受益。",
+                },
+                {
+                    "market": "cn_a",
+                    "direction": "mixed",
+                    "segments": ["AI芯片", "服务器"],
+                    "rationale_zh": "A股硬件链条受益方向明确，但兑现节奏仍需观察。",
+                },
+            ],
+            "market_impact_bullish_logic_zh": "推理需求增长会带动芯片、服务器和数据中心投入。",
+            "market_impact_pressure_logic_zh": "部分低效算力资产可能承压。",
+            "market_impact_risk_zh": "仅为产业链影响分析，不构成投资建议。",
+        }
+    )
+
+    result = _run_async(
+        summarizer.generate_summary(
+            [item],
+            date="2026-07-02",
+            total_fetched=10,
+            language="zh",
+        )
+    )
+
+    assert "今日产业链影响概览" not in result
+    assert '<details class="market-impact"' not in result
+    assert "产业链影响" not in result
+    assert "AI算力基础设施链条" not in result
+    assert "A股/美股方向" not in result

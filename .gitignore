@@ -46,7 +46,7 @@ data/mcp-secrets.json
 data/mcp-runs/
 data/x_cookies_*.json
 
-docs/_posts/*.md
+# Daily summaries under docs/_posts are public archive content.
 
 # Logs
 logs/*.log

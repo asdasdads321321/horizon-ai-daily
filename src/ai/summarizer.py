@@ -1,7 +1,7 @@
-"""Daily summary generation — pure programmatic rendering."""
+"""Daily summary generation - pure programmatic rendering."""
 
 import re
-from typing import List, Dict
+from typing import List
 
 from ..models import ContentItem
 
@@ -64,9 +64,6 @@ LABELS = {
 class DailySummarizer:
     """Generates daily Markdown summaries from pre-analyzed content items."""
 
-    def __init__(self):
-        pass
-
     async def generate_summary(
         self,
         items: List[ContentItem],
@@ -74,19 +71,7 @@ class DailySummarizer:
         total_fetched: int,
         language: str = "en",
     ) -> str:
-        """Generate daily summary in Markdown format.
-
-        Items are rendered in score-descending order (already sorted by orchestrator).
-
-        Args:
-            items: High-scoring content items (already enriched)
-            date: Date string (YYYY-MM-DD)
-            total_fetched: Total number of items fetched before filtering
-            language: Output language, either "en" or "zh"
-
-        Returns:
-            str: Markdown formatted summary
-        """
+        """Generate daily summary in Markdown format."""
         labels = LABELS.get(language, LABELS["en"])
 
         if not items:
@@ -98,18 +83,20 @@ class DailySummarizer:
             "---\n\n"
         )
 
-        # TOC
         toc_entries = []
         for i, item in enumerate(items):
-            _t = item.metadata.get(f"title_{language}") or item.title
-            t = str(_t).replace("[", "(").replace("]", ")")
+            title = str(item.metadata.get(f"title_{language}") or item.title)
+            title = title.replace("[", "(").replace("]", ")")
             if language == "zh":
-                t = _pangu(t)
+                title = _pangu(title)
             score = item.ai_score or "?"
-            toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
+            toc_entries.append(f"{i + 1}. [{title}](#item-{i + 1}) ⭐️ {score}/10")
         toc = "\n".join(toc_entries) + "\n\n---\n\n"
 
-        parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
+        parts = [
+            self._format_item(item, labels, language, i + 1)
+            for i, item in enumerate(items)
+        ]
 
         return header + toc + "".join(parts)
 
@@ -144,7 +131,7 @@ class DailySummarizer:
             if language == "zh":
                 title = _pangu(title)
             score = item.ai_score or "?"
-            entries.append(f"{i}. [{title}]({item.url}) \u2b50\ufe0f {score}/10")
+            entries.append(f"{i}. [{title}]({item.url}) ⭐️ {score}/10")
 
         return header + "\n".join(entries)
 
@@ -162,8 +149,8 @@ class DailySummarizer:
 
     def _format_item(self, item: ContentItem, labels: dict, language: str, index: int) -> str:
         """Format a single ContentItem into Markdown."""
-        _title = item.metadata.get(f"title_{language}") or item.title
-        title = str(_title).replace("[", "(").replace("]", ")")
+        title = str(item.metadata.get(f"title_{language}") or item.title)
+        title = title.replace("[", "(").replace("]", ")")
         url = str(item.url)
         score = item.ai_score or "?"
         meta = item.metadata
@@ -187,7 +174,6 @@ class DailySummarizer:
             background = _pangu(background)
             discussion = _pangu(discussion)
 
-        # Source line with parts joined by " · ", link appended at end
         source_type = item.source_type.value
         source_parts = [source_type]
         if meta.get("subreddit"):
@@ -205,7 +191,7 @@ class DailySummarizer:
             else:
                 day = item.published_at.strftime("%d").lstrip("0")
                 source_parts.append(item.published_at.strftime(f"%b {day}, %H:%M"))
-        source_line = " \u00b7 ".join(source_parts)  # ·
+        source_line = " · ".join(source_parts)
 
         discussion_url = meta.get("discussion_url")
         if discussion_url:
@@ -215,7 +201,7 @@ class DailySummarizer:
 
         lines = [
             f'<a id="item-{index}"></a>',
-            f"## [{title}]({url}) \u2b50\ufe0f {score}/10",  # ⭐️
+            f"## [{title}]({url}) ⭐️ {score}/10",
             "",
             summary,
             "",

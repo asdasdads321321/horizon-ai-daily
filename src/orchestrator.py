@@ -4,8 +4,10 @@ import asyncio
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
+import os
 from typing import List, Dict, Optional
 from urllib.parse import urlparse
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 import httpx
 from rich.console import Console
 
@@ -145,11 +147,17 @@ class HorizonOrchestrator:
             # 6. Search related stories + enrich with background knowledge (2nd AI pass)
             await self._enrich_important_items(important_items)
 
+            today = self._summary_date()
+
             # 7. Generate and save daily summaries for each configured language
-            today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
-                summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
+                summary = await summarizer.generate_summary(
+                    important_items,
+                    today,
+                    len(all_items),
+                    language=lang,
+                )
 
                 # Save to data/summaries/
                 summary_path = self.storage.save_daily_summary(today, summary, language=lang)
@@ -243,6 +251,29 @@ class HorizonOrchestrator:
             hours = self.config.filtering.time_window_hours
             since = datetime.now(timezone.utc) - timedelta(hours=hours)
         return since
+
+    @staticmethod
+    def _summary_date(now: Optional[datetime] = None) -> str:
+        """Return the date label for generated summaries.
+
+        Horizon keeps fetch windows in UTC, but daily archive names should follow
+        the configured report timezone when a scheduled runner provides one.
+        """
+        tz_name = os.getenv("HORIZON_SUMMARY_TZ") or os.getenv("TZ")
+        target_tz = timezone.utc
+        if tz_name:
+            try:
+                target_tz = ZoneInfo(tz_name)
+            except ZoneInfoNotFoundError:
+                if tz_name in {"Asia/Hong_Kong", "Asia/Shanghai", "Asia/Beijing"}:
+                    target_tz = timezone(timedelta(hours=8))
+                else:
+                    target_tz = timezone.utc
+
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        return current.astimezone(target_tz).strftime("%Y-%m-%d")
 
     async def fetch_all_sources(self, since: datetime) -> List[ContentItem]:
         """Fetch content from all configured sources.

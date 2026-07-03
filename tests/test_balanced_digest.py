@@ -122,6 +122,16 @@ def test_duplicate_category_warns_and_first_group_wins() -> None:
     assert "using 'first'" in orchestrator.console.export_text()
 
 
+def test_summary_date_uses_configured_timezone(monkeypatch) -> None:
+    monkeypatch.setenv("HORIZON_SUMMARY_TZ", "Asia/Hong_Kong")
+
+    result = HorizonOrchestrator._summary_date(
+        datetime(2026, 7, 2, 22, 0, tzinfo=timezone.utc)
+    )
+
+    assert result == "2026-07-03"
+
+
 @pytest.mark.parametrize(
     "kwargs",
     [
