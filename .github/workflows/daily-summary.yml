@@ -2,8 +2,9 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    # Run at 06:00 in Hong Kong / Beijing time.
-    - cron: '0 6 * * *'
+    # Run in the 06:00 hour in Hong Kong / Beijing time.
+    # Avoid minute 0 because scheduled GitHub Actions can be delayed at the top of the hour.
+    - cron: '17 6 * * *'
       timezone: "Asia/Hong_Kong"
   workflow_dispatch:
 
